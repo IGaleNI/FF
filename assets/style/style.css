@@ -1,0 +1,197 @@
+@import url(default.css);
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Yeseva+One&display=swap");
+
+body {
+  display: grid;
+
+  grid-template-columns: minmax(16px, auto) minmax(288px, 1263px) minmax(
+      16px,
+      auto
+    );
+  grid-template-areas:
+    ". header ."
+    "title title title"
+    ". content ."
+    "footer footer footer";
+}
+
+/* HEADER */
+
+.header {
+  grid-area: header;
+}
+
+.header__inner {
+  height: 83px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.header__list {
+  display: flex;
+  gap: 47px;
+}
+
+.header__link {
+  transition: color 0.2s linear;
+}
+
+.header__link:hover {
+  color: #e3b873;
+}
+
+.active {
+  color: #e3b873;
+}
+
+/* MAIN */
+
+.main {
+  height: 707px;
+  width: 100%;
+  grid-area: title;
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* HERO SECTION */
+.hero {
+  max-width: 1263px;
+  margin: 0 auto;
+  padding: 194px 0 0 42px;
+}
+.hero__title,
+.hero__title > span {
+  font-family: "Yeseva One", serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.hero__title > span {
+  color: #e3b873;
+}
+
+.hero__description {
+  font-size: 22px;
+  padding-top: 19px;
+}
+
+.hero__btn-first,
+.hero__btn-second {
+  width: 207px;
+  height: 51px;
+  margin: 41px 20px 0 0;
+}
+
+.hero__btn-second {
+  background: none;
+  border: 1px solid #fff;
+  transition: border 0.2s linear, color 0.2s linear;
+}
+
+.hero__btn-second:hover {
+  color: #e3b873;
+  border: 1px solid #e3b873;
+}
+
+/* PROJECT SECTION */
+
+.project {
+  margin: 319px 134px 0 134px;
+}
+.project__inner {
+  max-width: 1263px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    ". . list list list"
+    "title . img img img"
+    "desc desc img img img"
+    "about about img img img"
+    "about about img img img"
+    "nav nav img img img";
+}
+
+.project__menu {
+  grid-area: list;
+}
+.project__list {
+  display: flex;
+  justify-content: start;
+  padding-top: 100px;
+  gap: 60px;
+}
+
+.project__link {
+  font-family: "Yeseva One", serif;
+  font-size: 14px;
+  transform: color 0.2s linear, border-bottom 0.2s linear;
+}
+
+.project__link:hover {
+  color: #e3b873;
+  border-bottom: 1px solid #e3b873;
+}
+
+.project__link-active {
+  color: #e3b873;
+  border-bottom: 1px solid #e3b873;
+}
+.project__img {
+  grid-area: img;
+  width: 100%;
+}
+
+.project__title {
+  grid-area: title;
+  font-size: 27px;
+}
+
+.project__description {
+  grid-area: desc;
+  font-size: 14px;
+  line-height: 27px;
+}
+
+.project__box-wrapper {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.project__box-title {
+  font-size: 18px;
+  padding-top: 34px;
+}
+
+.project__box-disc {
+  font-size: 13px;
+  line-height: 22px;
+  padding-top: 9px;
+}
+
+.project__slide {
+  margin-top: 80px;
+  display: flex;
+  gap: 30px;
+}
+
+.project__slide > img {
+  cursor: pointer;
+}
+.project__circle {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff30;
+}
+
+.project__circle-active {
+  background-color: #fff;
+}
